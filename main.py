@@ -1,16 +1,14 @@
-# This is a sample Python script.
+"""This is the  module that runs the whole code base"""
+import rectangle
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+OUTPUT_DIR = 'output_dir/'
+WIDTH, HEIGHT = 600, 400
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    bg_color = (0.8, 0.8, 0.8)
+    shape_color = (1, 0, 0)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    surface, context = rectangle.create_surface(WIDTH, HEIGHT, bg_color)
+    rectangle.draw_rectangle(context, 100, 100, 100, 240, shape_color)
+    surface.write_to_png(f'{OUTPUT_DIR}new_rectangle.png')
+    print('Done!')
