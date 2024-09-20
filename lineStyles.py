@@ -10,23 +10,46 @@ context.paint()
 context.set_source_rgb(0,0,0)
 context.set_line_width(20)
 
-"""LINE CAPS"""
-# Butt Cap
-context.move_to(100,80)
-context.line_to(500,80)
-context.set_line_cap(cairo.LINE_CAP_BUTT)
+# """LINE CAPS"""
+# # Butt Cap
+# context.move_to(100,80)
+# context.line_to(500,80)
+# context.set_line_cap(cairo.LINE_CAP_BUTT)
+# context.stroke()
+#
+# # Square Cap
+# context.move_to(100,200)
+# context.line_to(500,200)
+# context.set_line_cap(cairo.LINE_CAP_SQUARE)
+# context.stroke()
+#
+# # Round Cap
+# context.move_to(100,320)
+# context.line_to(500,320)
+# context.set_line_cap(cairo.LINE_CAP_ROUND)
+# context.stroke()
+
+
+"""LINE JOINS"""
+#Miter join
+context.move_to(50,100)
+context.line_to(180,300)
+context.line_to(50,300)
+context.set_line_join(cairo.LINE_JOIN_MITER)
 context.stroke()
 
-# Square Cap
-context.move_to(100,200)
-context.line_to(500,200)
-context.set_line_cap(cairo.LINE_CAP_SQUARE)
+#Round Join
+context.move_to(240,100)
+context.line_to(370,300)
+context.line_to(240,300)
+context.set_line_join(cairo.LINE_JOIN_ROUND)
 context.stroke()
 
-# Round Cap
-context.move_to(100,320)
-context.line_to(500,320)
-context.set_line_cap(cairo.LINE_CAP_ROUND)
+#Bevel Join
+context.move_to(430,100)
+context.line_to(560,300)
+context.line_to(430,300)
+context.set_line_join(cairo.LINE_JOIN_BEVEL)
 context.stroke()
 
 surface.write_to_png('lines.png')
