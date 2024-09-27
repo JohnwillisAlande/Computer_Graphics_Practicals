@@ -1,5 +1,6 @@
 import cairo
 
+"""Sine-like curve with 2 red lines"""
 # Set up surface
 surface = cairo.ImageSurface(cairo.FORMAT_RGB24, 600, 400)
 context = cairo.Context(surface)
